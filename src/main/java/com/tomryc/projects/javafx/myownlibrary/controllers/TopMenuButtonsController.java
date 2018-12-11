@@ -12,6 +12,7 @@ public class TopMenuButtonsController {
     public static final String LIST_BOOKS_FXML = "/fxml/ListBooks.fxml";
     public static final String STATISTICS_FXML = "/fxml/Statistics.fxml";
     public static final String ADD_BOOK_FXML = "/fxml/AddBook.fxml";
+
     private MainController mainController;
 
     @FXML
