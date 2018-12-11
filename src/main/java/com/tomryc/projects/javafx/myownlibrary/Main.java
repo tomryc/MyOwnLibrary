@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 /**
  * Created by Tomasz Rycerz on 11/12/2018
  */
@@ -18,10 +21,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/BorderPaneMain.fxml"));
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
+        loader.setResources(bundle);
         BorderPane borderPane =loader.load();
+
         Scene scene = new Scene(borderPane);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("My library");
+        primaryStage.setTitle(bundle.getString("title.application"));
         primaryStage.show();
 
     }
