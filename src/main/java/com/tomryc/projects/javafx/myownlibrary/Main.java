@@ -1,5 +1,6 @@
 package com.tomryc.projects.javafx.myownlibrary;
 
+import com.tomryc.projects.javafx.myownlibrary.database.dbutils.DbManager;
 import com.tomryc.projects.javafx.myownlibrary.utils.FxmlUtils;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -27,6 +28,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));
         primaryStage.show();
+
+        DbManager.initDatabase();
 
     }
 
